@@ -102,6 +102,7 @@ export const updateCartItem = (lineItemId, quantity) => (dispatch) => commerce.c
  * Handle remove cart item success and update store
  */
 export const removeFromCartSuccess = (resp) => {
+  
   return {
     type: REMOVE_FROM_CART_SUCCESS,
     payload: resp

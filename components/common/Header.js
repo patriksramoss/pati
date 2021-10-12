@@ -142,12 +142,12 @@ class Header extends Component {
         <div className="d-flex align-items-center">
           { customer && customer.firstname && (
             <span className="mr-2 font-weight-regular">
-              Hi, { customer.firstname }!
+              Labdien, { customer.firstname }!
             </span>
           ) }
           <Link href="/account">
             <a className="font-color-black mx-2">
-              My account
+              Mans profils
             </a>
           </Link>
           <button
@@ -185,11 +185,11 @@ class Header extends Component {
         >
           <div className="d-none d-sm-flex">
             <Link href="/collection">
-              <a href="/collection" className="mr-4 font-color-black">Shop</a>
+              <a href="/collection" className="mr-4 font-color-black">E-Veikals</a>
             </Link>
             <Link href="/about">
               <a href="/about" className="font-color-black">
-                About
+                Par mums
               </a>
             </Link>
           </div>

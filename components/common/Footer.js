@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <footer className="pt-5">
-    <div className="custom-container mb-5 pb-5 pt-5">
+    {/* <div className="custom-container mb-5 pb-5 pt-5">
       <div className="row">
         <div className="col-12 col-sm-6 col-md-4">
           <p className="font-family-secondary font-size-display1 mb-4">
@@ -57,7 +57,7 @@ const Footer = () => (
                 Twitter
               </a>
               <a
-                href="https://www.instagram.com/commerce.js/"
+                href="https://www.instagram.com/pati.kosmetika/"
                 className="d-block font-color-medium"
                 target="_blank"
               >
@@ -97,12 +97,12 @@ const Footer = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
     <div className="pt-md-5">
       <div className="bg-brand300">
         <div className="custom-container d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div className="pt-5 pb-0 pt-md-4 pb-md-4 d-flex align-items-center flex-wrap justify-content-center">
-            <a
+            {/* <a
               href="https://app.netlify.com/start/deploy?repository=https://github.com/chec/commercejs-nextjs-demo-store"
               className="font-color-brand font-size-caption text-uppercase text-center"
               target="_blank"
@@ -124,15 +124,18 @@ const Footer = () => (
               target="_blank"
             >
               Contribute
-            </a>
+            </a> */}
+
+
+
           </div>
           <div className="font-color-brand font-size-caption py-4 text-right">
           <a
-              href="https://commercejs.com/"
+              // href="https://commercejs.com/"
               className="font-color-brand font-size-caption text-uppercase text-center"
               target="_blank"
             >
-              &copy; { new Date().getFullYear() } Chec/Commerce.js.
+              &copy; { new Date().getFullYear() } PATI KOSMĒTIKA
             </a>
           </div>
         </div>

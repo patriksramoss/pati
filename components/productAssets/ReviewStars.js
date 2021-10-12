@@ -3,7 +3,7 @@ import React from 'react';
 export default function ReviewStars({ count }) {
   return (
     <div className="d-flex">
-      <div className="d-flex position-relative">
+      {/* <div className="d-flex position-relative">
         {[1, 2, 3, 4, 5].map(index => (
           <img key={index} src="/icon/star.svg" alt="" className="w-16" />
         ))}
@@ -18,7 +18,7 @@ export default function ReviewStars({ count }) {
       </div>
       <span className="ml-2 font-size-caption font-weight-semibold">
         {count}/5
-      </span>
+      </span> */}
     </div>
   );
 }

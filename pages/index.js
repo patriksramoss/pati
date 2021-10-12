@@ -12,14 +12,15 @@ import ProductsBanner from '../components/homepage/ProductsBanner';
 const Home = () => (
   <Root transparentHeader={true}>
     <Head>
-      <title>Home | Whole Tech Store</title>
+      <title>Sākums | PATI</title>
     </Head>
 
-    <HeroSection />
-    <HomeBanner />
-    <CategoryBanner />
-    <ProductsBanner />
     <ExploreBanner />
+
+    {/* <HomeBanner /> */}
+    {/* <CategoryBanner /> */}
+    <ProductsBanner />
+        {/* <HeroSection /> */}
     <SocialMedia />
     <Footer />
   </Root>

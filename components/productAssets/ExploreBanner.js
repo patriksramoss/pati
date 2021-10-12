@@ -70,15 +70,15 @@ export default class ExploreBanner extends React.Component {
             <div className="row py-5">
               <div className="col-12 col-md-6 py-5">
                 <p
-                  className="font-size-display3 font-weight-light mb-4"
+                  className="font-size-heading font-weight-light mb-4"
                   style={{ maxWidth: '20rem' }}
                 >
-                  A new shopping experience
+                  Preces higiēnai, skaistumam un labai pašsajūtai
                 </p>
                 <div className="d-flex">
                   <Link href="/collection">
                     <a className="d-flex py-3 align-items-center font-color-black borderbottom border-color-black">
-                      <p className="mr-3">Explore products</p>
+                      <p className="mr-3">Iepirkties</p>
                       <img src="/icon/arrow-long-right.svg" />
                     </a>
                   </Link>

@@ -24,6 +24,8 @@ class CartItem extends Component {
     this.props.dispatch(removeFromCart(lineItem));
   }
 
+  
+
   render() {
     const { item } = this.props;
 

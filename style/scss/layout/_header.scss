@@ -4,19 +4,19 @@ header {
 
 .header {
   padding: 1.5rem 3rem;
-  background-color: transparent;
+  background-color: white;
   border-bottom: 1px solid;
-  border-color: transparent;
+  border-color: black;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
     filter 0.01s linear 0.2s;
-  filter: invert(1);
 
-  &.invert {
-    background-color: #fff;
-    border-color: #000;
-    filter: none;
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  }
+
+  // &.invert {
+  //   background-color: #fff;
+  //   border-color: #000;
+  //   filter: none;
+  //   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  // }
 
   @include small-xs {
     padding: 1.25rem 1.5rem 1.25rem 1rem;
@@ -26,7 +26,7 @@ header {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -38,7 +38,7 @@ header {
 
   .logo {
     width: auto;
-    height: 1.5rem;
+    height: 6.5rem;
   }
 
   .cart-count {

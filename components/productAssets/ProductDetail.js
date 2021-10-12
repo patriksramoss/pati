@@ -129,13 +129,13 @@ class ProductDetail extends Component {
     return (
       <div>
         {/* Product Summary */}
-        <div onClick={this.handleReviewClick} className="cursor-pointer">
+        {/* <div onClick={this.handleReviewClick} className="cursor-pointer">
           <ReviewStars count={4.5} />
-        </div>
-        <p className="font-size-display3 font-family-secondary mt-2 mb-2">
+        </div> */}
+        <p className="font-size-heading font-family-secondary font-weight-bold mt-2 mb-2">
           {name}
         </p>
-        <div className="mb-4 pb-3 font-size-subheader">{(description || '').replace(reg, '')}</div>
+        <div className="mb-4 pb-3 font-size-body font-family-secondary font-weight-semibold">{(description || '').replace(/<p[^>]*>/g, "\n").replace(reg, '')}</div>
 
         {/* Product Variant */}
           <div className="d-none d-sm-block">
@@ -152,7 +152,7 @@ class ProductDetail extends Component {
           <button onClick={this.handleAddToCart} disabled={soldOut}
               className="h-56 bg-black font-color-white pl-3 pr-4 d-flex align-items-center flex-grow-1" type="button">
             <span className="flex-grow-1 mr-3 text-center">
-              { soldOut ? 'Sold out' : 'Add to cart' }
+              { soldOut ? 'Sold out' : 'Pievienot grozam' }
             </span>
             <span className="border-left border-color-white pl-3">
             {priceSymbol}{this.getPrice()}

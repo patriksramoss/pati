@@ -17,7 +17,7 @@ import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
 
 const detailView = `<p>
-  Ask any questions - wholetechstore@outlook.com
+  Ask any questions - (epasts)
 </p>`;
 
 export default function Product() {
@@ -55,7 +55,9 @@ export default function Product() {
   }, [permalink]);
 
   if (loading) {
-    return <TemplatePage page={ {message: 'Loading...'} } />
+    return <TemplatePage  />
+
+
   }
 
   if (product === null) {
@@ -66,7 +68,7 @@ export default function Product() {
   return (
     <Root>
       <Head>
-        <title>{ product.name } | Whole Tech Store</title>
+        <title>{ product.name } | PATI</title>
       </Head>
 
       <div className="py-5 my-5">
@@ -102,17 +104,16 @@ export default function Product() {
             onClick={toggleShipping}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Shipping and returns
+            Piegāde
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
-              Arrives in 5 to 7 days, returns accepted within 30
-              days. For more information, click here.
+              Piegāde 5-7 dienu laikā.
             </div>
           </Collapse>
           <div className="h-1 border-bottom border-color-black" />
-          <div
+          {/* <div
             onClick={toggleDetails}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
@@ -126,7 +127,7 @@ export default function Product() {
                 __html: detailView
               }}
             />
-          </Collapse>
+          </Collapse> */}
           <div className="h-1 borderbottom border-color-black" />
         </div>
       </div>

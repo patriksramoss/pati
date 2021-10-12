@@ -41,7 +41,7 @@ export default function HeroSection() {
                
               </p>
               <p className="text-transform-uppercase font-size-title mb-5 hero-subheader">
-                A range of pre-owned computer parts for sale
+                ...
               </p>
               <Link href="/collection">
                 <a className="d-flex align-items-center bg-transparent border border-color-white h-56 px-5 font-color-white hero-btn">

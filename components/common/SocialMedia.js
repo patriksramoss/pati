@@ -2,7 +2,7 @@ import React from 'react';
 
 const imagesInfo = [
   {
-    image: '/images/insta/1.png',
+    image: '/images/insta/1.jpg',
     translateRatio: -50
   },
   {
@@ -78,14 +78,14 @@ export default class SocialMedia extends React.Component {
                 className="font-size-display1 mb-3"
                 style={{ maxWidth: '26rem' }}
               >
-                Follow us on Instagram for more updates
+                Lai sekotu līdzi jaunumiem, pieseko mums Instagramā!
               </p>
               <div className="d-flex">
                 <a
-                  href="/about"
+                  href="https://www.instagram.com/pati.kosmetika/"
                   className="d-flex py-3 align-items-center font-color-black borderbottom border-color-black"
                 >
-                  <p className="mr-3">Follow us</p>
+                  <p className="mr-3">Uz Instagramu</p>
                   <img src="/icon/arrow-long-right.svg" alt="Arrow icon"/>
                 </a>
               </div>
@@ -94,6 +94,7 @@ export default class SocialMedia extends React.Component {
           <div className="d-flex footer-follow--images">
             {imagesInfo.map((item, i) => (
               <div key={i} className="justify-content-sm-end flex-column follow-images">
+                <a href="https://www.instagram.com/pati.kosmetika/">
                 <div
                   ref={image => this.images.push(image)}
                   style={{
@@ -101,6 +102,7 @@ export default class SocialMedia extends React.Component {
                     background: `url("${item.image}") center center/cover`
                   }}
                 />
+                </a>
               </div>
             ))}
           </div>

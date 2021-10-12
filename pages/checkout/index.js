@@ -552,12 +552,12 @@ class CheckoutPage extends Component {
               <div className="d-flex pb-4 breadcrumb-container">
                 <Link href="/collection">
                   <div className="font-size-caption text-decoration-underline cursor-pointer">
-                    Cart
+                    Grozs
                   </div>
                 </Link>
                 <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
                 <div className="font-size-caption font-weight-bold cursor-pointer">
-                  Checkout
+                  Pasūtīt
                 </div>
               </div>
               {
@@ -565,13 +565,13 @@ class CheckoutPage extends Component {
                 && (
                   <form onChange={this.handleChangeForm} onSubmit={this.captureOrder}>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Customer
+                      Klients
                     </p>
                     <div className="row">
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            First name*
+                            Vārds*
                           </p>
                           <input required name="customer[first_name]" autoComplete="given-name" value={this.state['customer[first_name]']} className="rounded-0 w-100" />
                         </label>
@@ -579,7 +579,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Last name*
+                            Uzvārds*
                           </p>
                           <input required name="customer[last_name]" autoComplete="family-name" value={this.state['customer[last_name]']} className="rounded-0 w-100" />
                         </label>
@@ -589,7 +589,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Telephone
+                            Telefons
                           </p>
                           <input
                             name="customer[phone]"
@@ -602,7 +602,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Email address*
+                            Epasta adrese*
                           </p>
                           <input
                             required
@@ -615,7 +615,7 @@ class CheckoutPage extends Component {
                       </div>
                     </div>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Shipping Address
+                      Piegādes adrese
                     </p>
                     <div className="mb-5">
                       <AddressForm
@@ -633,7 +633,7 @@ class CheckoutPage extends Component {
                         <div className="col-12 mb-3">
                           <label className="w-100">
                             <p className="mb-1 font-size-caption font-color-light">
-                              Shipping method*
+                              Piegādes metode*
                             </p>
                             <Dropdown
                               name="fulfillment[shipping_method]"
@@ -647,7 +647,7 @@ class CheckoutPage extends Component {
                               {
                                 shippingOptions && shippingOptions.map(option => (
                                   <option key={option.id} value={option.id}>
-                                  { `${option.description} - $${option.price.formatted_with_code}` }
+                                  { `${option.description} - ${option.price.formatted_with_code}` }
                                   </option>
                                 ))
                               }
@@ -655,7 +655,7 @@ class CheckoutPage extends Component {
                           </label>
                         </div>
                       </div>
-                      <div
+                      {/* <div
                         onClick={this.toggleNewsletter}
                         className="d-flex mb-4 flex-nowrap cursor-pointer"
                       >
@@ -675,7 +675,7 @@ class CheckoutPage extends Component {
                           Order notes (optional)
                         </p>
                         <textarea name="orderNotes" value={this.state.orderNotes} className="rounded-0 w-100" />
-                      </label>
+                      </label> */}
                     </div>
 
                     { this.renderPaymentDetails() }
@@ -683,7 +683,7 @@ class CheckoutPage extends Component {
                     {/* Billing Address */}
                     { checkout.collects && checkout.collects.billing_address && <>
                       <p className="font-size-subheader font-weight-semibold mb-3">
-                        Billing Address
+                        Norēķina adrese
                       </p>
                       <div className="border border-color-gray400 mb-5">
                         {billingOptions.map((value, index) => (
@@ -725,7 +725,7 @@ class CheckoutPage extends Component {
                       className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                       disabled={!selectedShippingOption}
                     >
-                      Make payment
+                      Izdarīt samaksu
                     </button>
                   </form>
                 )
@@ -735,7 +735,7 @@ class CheckoutPage extends Component {
             <div className="col-12 col-lg-5 col-md-10 offset-md-1 mt-4 mt-lg-0">
               <div className="bg-brand200 p-lg-5 p-3 checkout-summary">
                 <div className="borderbottom font-size-subheader border-color-gray400 pb-2 font-weight-medium">
-                  Your order
+                  Tavs pasūtījums
                 </div>
                 <div className="pt-3 borderbottom border-color-gray400">
                   {(checkout.live ? checkout.live.line_items : []).map((item, index, items) => {
@@ -762,14 +762,14 @@ class CheckoutPage extends Component {
                             </div>
                           </div>
                           <div className="text-right font-weight-semibold">
-                            ${item.line_total.formatted_with_code}
+                            {item.line_total.formatted_with_code}
                           </div>
                         </div>
                       </div>
                     )
                   })}
                 </div>
-                <div className="row py-3 borderbottom border-color-gray400">
+                {/* <div className="row py-3 borderbottom border-color-gray400">
                   <input
                     name="discountCode"
                     onChange={this.handleChangeForm}
@@ -784,25 +784,25 @@ class CheckoutPage extends Component {
                   >
                     Apply
                   </button>
-                </div>
+                </div> */}
                 <div className="py-3 borderbottom border-color-black">
                   {[
                     {
                       name: 'Subtotal',
                       amount: checkout.live ? checkout.live.subtotal.formatted_with_symbol : '',
                     },
-                    {
-                      name: 'Tax',
-                      amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
-                    },
+                    // {
+                    //   name: 'Tax (Included)',
+                    //   amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
+                    // },
                     {
                       name: 'Shipping',
                       amount: selectedShippingOption ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}` : 'No shipping method selected',
                     },
-                    {
-                      name: 'Discount',
-                      amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'No discount code applied',
-                    }
+                    // {
+                    //   name: 'Discount',
+                    //   amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'No discount code applied',
+                    // }
                   ].map((item, i) => (
                     <div key={i} className="d-flex justify-content-between align-items-center mb-2">
                       <p>{item.name}</p>
@@ -814,10 +814,10 @@ class CheckoutPage extends Component {
                 </div>
                 <div className="d-flex justify-content-between align-items-center mb-2 pt-3">
                   <p className="font-size-title font-weight-semibold">
-                    Total amount
+                    Kopējā summa
                   </p>
                   <p className="text-right font-weight-semibold font-size-title">
-                    $ { checkout.live ? checkout.live.total.formatted_with_code : '' }
+                    { checkout.live ? checkout.live.total.formatted_with_code : '' }
                   </p>
                 </div>
               </div>
