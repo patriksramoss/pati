@@ -9,19 +9,16 @@ const params = {
   autoplay: {
     delay: 5000
   },
-  loop: true,
+  loop: false,
   allowTouchMove: false,
-  speed: 1000,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  }
+  speed: 1000
+  // effect: 'fade',
+  // fadeEffect: {
+  //   crossFade: true
+  // }
 };
 const images = [
-  '/images/home-1.jpg',
-  '/images/home-2.jpg',
-  '/images/home-3.jpg',
-  '/images/home-4.jpg',
+  '/images/explore-banner.jpg'
 ];
 
 export default function HeroSection() {
@@ -40,12 +37,12 @@ export default function HeroSection() {
               <p className="font-size-display5 font-family-secondary mb-4 text-center hero-header">
                
               </p>
-              <p className="text-transform-uppercase font-size-title mb-5 hero-subheader">
-                ...
+              <p className="font-size-title mb-5 hero-subheader">
+                Preces higiēnai, skaistumam un labai pašsajūtai
               </p>
               <Link href="/collection">
-                <a className="d-flex align-items-center bg-transparent border border-color-white h-56 px-5 font-color-white hero-btn">
-                  Shop now
+                <a className="d-flex align-items-center border border-color-white h-56 px-5 font-color-white hero-btn">
+                  Iepirkties
                 </a>
               </Link>
             </div>

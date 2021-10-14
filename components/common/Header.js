@@ -24,15 +24,15 @@ const transitionStyles = {
 
 const mobileMenuLinks = [
   {
-    name: 'Home',
+    name: 'Sākums',
     link: '/'
   },
   {
-    name: 'Shop',
+    name: 'E-Veikals',
     link: '/collection'
   },
   {
-    name: 'About',
+    name: 'Par mums',
     link: '/about'
   }
 ];
@@ -141,7 +141,7 @@ class Header extends Component {
       return (
         <div className="d-flex align-items-center">
           { customer && customer.firstname && (
-            <span className="mr-2 font-weight-regular">
+            <span className="mr-2 font-weight-regular greet">
               Labdien, { customer.firstname }!
             </span>
           ) }
@@ -163,7 +163,7 @@ class Header extends Component {
 
     return (
       <Link href="/login">
-        <a className="font-color-black login">
+        <a className="mr-4 font-color-black login">
           Login
         </a>
       </Link>
@@ -179,16 +179,16 @@ class Header extends Component {
         <Cart isOpen={showCart} toggle={value => this.toggleCart(value)} />
         <div
           ref={this.header}
-          className={`d-flex header align-items-center justify-content-between position-relative ${
+          className={`d-flex header align-items-center position-relative ${
             transparent ? '' : 'invert'
           }`}
         >
           <div className="d-none d-sm-flex">
             <Link href="/collection">
-              <a href="/collection" className="mr-4 font-color-black">E-Veikals</a>
+              <a href="/collection" className="mr-3 font-color-black">E-Veikals</a>
             </Link>
             <Link href="/about">
-              <a href="/about" className="font-color-black">
+              <a href="/about" className="mr-3 font-color-black">
                 Par mums
               </a>
             </Link>
@@ -228,7 +228,7 @@ class Header extends Component {
         <Transition in={showMobileMenu} timeout={duration}>
           {state => (
             <div
-              className="d-sm-none position-fixed left-0 right-0 overflow-hidden"
+              className="d-sm-flex position-fixed left-0 right-0 overflow-hidden"
               style={{
                 ...defaultStyle,
                 ...transitionStyles[state],

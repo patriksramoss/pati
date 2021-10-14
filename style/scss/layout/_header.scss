@@ -4,11 +4,17 @@ header {
 
 .header {
   padding: 1.5rem 3rem;
-  background-color: white;
-  border-bottom: 1px solid;
-  border-color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  // border-bottom: 1px solid;
+  // border-color: black;
+  border-radius: 0px 0px 40px 40px;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out,
     filter 0.01s linear 0.2s;
+    justify-content: end;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.1);
 
 
   // &.invert {
@@ -20,6 +26,7 @@ header {
 
   @include small-xs {
     padding: 1.25rem 1.5rem 1.25rem 1rem;
+    justify-content: space-between;
   }
 
   .logo-container {
@@ -27,18 +34,32 @@ header {
     align-items: center;
     position: absolute;
     top: 80%;
-    left: 50%;
+    left: 100px;
     transform: translate(-50%, -50%);
 
+    
+
     @include small-xs {
-      position: static;
+      position: relative;
+      left:0;
+      justify-content: start;
       transform: none;
+    }
+  }
+
+  .greet{
+    display: block;
+    @include small-xs {
+      display:none;
     }
   }
 
   .logo {
     width: auto;
     height: 6.5rem;
+    @include small-xs {
+      height: 4.5rem;
+    }
   }
 
   .cart-count {
@@ -49,11 +70,17 @@ header {
 
   .login {
     position: relative;
-    top: 0.5rem;
+    top: 0.4rem;
     margin-right: 1rem;
+    font-weight: 600;
+    padding:0;
   }
 }
 
 .mobile-menu-inner {
   padding: 7rem 1.5rem;
+}
+
+@media (min-width: #{$iphone6-width}) and (max-width: #{$tablet-width - 1px}) {
+  
 }

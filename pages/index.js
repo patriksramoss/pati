@@ -15,12 +15,13 @@ const Home = () => (
       <title>Sākums | PATI</title>
     </Head>
 
-    <ExploreBanner />
+ <HeroSection />
+    {/* <ExploreBanner /> */}
 
     {/* <HomeBanner /> */}
     {/* <CategoryBanner /> */}
     <ProductsBanner />
-        {/* <HeroSection /> */}
+       
     <SocialMedia />
     <Footer />
   </Root>

@@ -2,9 +2,11 @@
 
   margin-top: 5%;
 
+
   .explore-banner--image {
     background: url("/images/explore-banner.jpg") center center/cover;
     padding-bottom: 100%;
+    background-size: cover;
 
     @include md {
       padding-bottom: 180%;
