@@ -1,23 +1,9 @@
 [
   {
-    "slug": "facial-products",
-    "name": "Facial Products",
+    "slug": "Šampūnziepes",
+    "name": "Šampūnziepes",
     "meta": {
-      "image": "/images/collection/1.png"
-    }
-  },
-  {
-    "slug": "hair-products",
-    "name": "Hair Products",
-    "meta": {
-      "image": "/images/collection/2.png"
-    }
-  },
-  {
-    "slug": "body-products",
-    "name": "Body Products",
-    "meta": {
-      "image": "/images/collection/3.png"
+      "image": "/images/collection/citronzale-3.jpg"
     }
   }
 ]
